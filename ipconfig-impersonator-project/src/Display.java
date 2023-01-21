@@ -69,19 +69,19 @@ public class Display extends JPanel{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					hostNameLabel.setText(hostNameLabel.getText() + InetAddress.getLocalHost().getHostName());
+					hostNameLabel.setText(hostNameLabel.getText() + InetAddress.getLocalHost().getHostName() + "   |   ");
 
-					networkAdapterLabel.setText(networkAdapterLabel.getText() + getNetworkAdapter());
+					networkAdapterLabel.setText(networkAdapterLabel.getText() + getNetworkAdapter() + "   |   ");
 					
-					macAddressLabel.setText(macAddressLabel.getText() + getMac());
+					macAddressLabel.setText(macAddressLabel.getText() + getMac() + "   |   ");
 					
-					ipv4AddressLabel.setText(ipv4AddressLabel.getText() + getIPv4());
+					ipv4AddressLabel.setText(ipv4AddressLabel.getText() + getIPv4() + "   |   ");
 					
-					subnetMaskLabel.setText(subnetMaskLabel.getText() + getSubnetMask());
+					subnetMaskLabel.setText(subnetMaskLabel.getText() + getSubnetMask() + "   |   ");
 					
-					subnetAltLabel.setText(subnetAltLabel.getText() + getSubnet());
+					subnetAltLabel.setText(subnetAltLabel.getText() + getSubnet() + "   |   ");
 					
-					ipv6AddressLabel.setText(ipv6AddressLabel.getText() + getIPv6());
+					ipv6AddressLabel.setText(ipv6AddressLabel.getText() + getIPv6() + "   |   ");
 					//ipv6AddressLabel.setText(ipv6AddressLabel.getText() + getIPv6Address());
 					
 				} catch (UnknownHostException x) {
