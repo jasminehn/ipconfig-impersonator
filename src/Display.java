@@ -82,6 +82,7 @@ public class Display extends JPanel{
 					subnetAltLabel.setText(subnetAltLabel.getText() + getSubnet() + "   |   ");
 					
 					ipv6AddressLabel.setText(ipv6AddressLabel.getText() + getIPv6() + "   |   ");
+					
 					//ipv6AddressLabel.setText(ipv6AddressLabel.getText() + getIPv6Address());
 					
 				} catch (UnknownHostException x) {
