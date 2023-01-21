@@ -99,7 +99,6 @@ public class Display extends JPanel{
 		NetworkInterface networkInterface = NetworkInterface.getByInetAddress(InetAddress.getLocalHost());
 		String name = networkInterface.getDisplayName();		
 		return name;
-		//source: https://stackoverflow.com/a/1221581
 	}
 	
 	String getMac() {
@@ -124,7 +123,6 @@ public class Display extends JPanel{
 			e.printStackTrace();
 		}
 	   return macAddress;
-	   //source: https://mkyong.com/java/how-to-get-mac-address-in-java/
 	}
 	
 	String getIPv4() {
@@ -137,7 +135,6 @@ public class Display extends JPanel{
 			e.printStackTrace();
 		}
 	   return ipv4Address;
-	   //source: https://stackoverflow.com/a/49238634
 	}
 	
 	String getSubnetMask() throws SocketException, UnknownHostException {
@@ -152,7 +149,6 @@ public class Display extends JPanel{
 		int oct4 = ((byte) (shft&0x000000ff)) & 0xff;
 		String submask = oct1+"."+oct2+"."+oct3+"."+oct4;
 		return submask;
-		//source: https://stackoverflow.com/a/1221581 and https://stackoverflow.com/a/33094601
 	}
 	
 	String getSubnet() throws SocketException, UnknownHostException {
@@ -163,7 +159,6 @@ public class Display extends JPanel{
 		
 		subnetAlt=getIPv4()+"/"+mask;
 		return subnetAlt;
-		//source: https://stackoverflow.com/a/1221581
 	}
 	
 	String getIPv6() throws IOException {
@@ -177,8 +172,7 @@ public class Display extends JPanel{
         else{
             System.out.println(this.getIPv6Addresses(localHost).getCanonicalHostName() + " Host Unreachable");
         }		
-		return ipv6;		
-		//source: https://stackoverflow.com/a/11974740
+		return ipv6;
 	}
 	
 	public Inet6Address getIPv6Addresses(InetAddress[] addresses) 
